@@ -49,6 +49,7 @@
 \toprule
 Version & Date       & Comment                                      & Responsible \\
 \midrule
+1.1       & 2025-XX-XX & Approved by the LG & Luke Marsden, Stein Haaland     \\
 1       & 2023-08-18 & Approved by the LG & Luke Marsden     \\
 0.2       & 2023-07-20 & Sent to the LG for approval & Luke Marsden     \\
 0.1     & 2023-06-05 & Initial draft & Luke Marsden     \\
@@ -64,7 +65,7 @@ Version & Date       & Comment                                      & Responsibl
 
 Data management plan of the University Centre in Svalbard (UNIS). UNIS is funded primarily by Kunnskapsdepartementet (KD), with other income sources including overhead income and infrastructure rental.
 
-This document was approved by the UNIS leadership group (LG) on 18. August 2023 and will be reviewed annually by the LG and data managers at UNIS. 
+This document should be reviewed annually by the LG and data managers at UNIS. 
 
 \section{Data summary}
 \label{s:data}
@@ -79,31 +80,31 @@ UNIS would like to encourage those involved in external projects involving UNIS 
 \subsection{Types and formats of data generated/collected}
 \label{ss:datatypes}
 
-UNIS comprises 4 scientific departments - arctic geology, arctic geophysics, arctic technology and arctic biology. Staff and students at UNIS collect a wide range of data within these disciplines.
+UNIS comprises 4 scientific departments - arctic geology (AG), Arctic Geophysics (AGF), Arctic Technology (AT) and arctic biology (AB). Staff and students at UNIS collect a wide range of data within these disciplines.
 
-Concerning which file formats to use when publishing data, UNIS follows the detailed recommendations outlined in the \href{https://sios-svalbard.org/sites/sios-svalbard.org/files/common/SDMS_Interoperability_Guidelines.pdf}{SDMS Interoperability Guidelines} - section `File Formats'.
+Concerning which file formats to use when publishing data, UNIS follows the detailed recommendations outlined in the Svalbard Integrated Arctic Earth Observing System (SIOS) Data Management System (SDMS) \href{https://sios-svalbard.org/sites/sios-svalbard.org/files/common/SDMS_Interoperability_Guidelines.pdf}{Interoperability Guidelines} - section `File Formats'.
 
-In brief, self explaining file formats (e.g. NetCDF, Darwin Core Archive) will be used. NetCDF itself is not self describing, so the Climate and Forecast Convention will be used as a semantic and structural standard. Adding the \href{https://wiki.esipfed.org/Attribute_Convention_for_Data_Discovery_1-3}{NetCDF Attribute Convention for Dataset Discovery} as global attributes embeds full discovery
-metadata (e.g. originator/PI, constraints etc.) in the file. SIOS and therefore UNIS recommends using the requirements list at the \href{https://adc.met.no/node/4}{Arctic Data Centre} as a minimum. Additional global attributes can be added as desired.
+In brief, self explaining file formats such as NetCDF-CF and Darwin Core Archive will be used. NetCDF itself is not self describing, so the Climate and Forecast Convention will be used as a semantic and structural standard. Adding the \href{https://wiki.esipfed.org/Attribute_Convention_for_Data_Discovery_1-3}{NetCDF Attribute Convention for Dataset Discovery} as global attributes embeds full discovery
+metadata (e.g. originator/PI, constraints etc.) in the file. SIOS and therefore UNIS recommends using the requirements list at the \href{https://adc.met.no/submit-data-as-netcdf-cf}{Arctic Data Centre} as a minimum. Additional global attributes can be added as desired.
 
-When it is not possible to encode data as NetCDF-CF or Darwin Core Archive, data can be published in a non-proprietary file format that is easy to consume for users (without specific software) accompanied by a detailed product manual (in PDF format).
+When it is not possible to encode data as NetCDF-CF, Darwin Core Archive, or some other machine-actionable format recommended by SIOS, data can be published in a non-proprietary file format that is easy to consume for users (without specific software) accompanied by a detailed product manual (in PDF format).
 
 Please refer to the \href{https://sios-svalbard.org/sites/sios-svalbard.org/files/common/SDMS_Interoperability_Guidelines.pdf}{SDMS Interoperability Guidelines} for more details and explanations.
 
 \section{FAIR data}
 \label{s:fair}
 
-UNIS is committed to publishing data that are Findable, Accessible, Interoperable and Reusable (FAIR). UNIS follows the recommendations of the \href{https://sios-svalbard.org/sites/sios-svalbard.org/files/common/SIOS_Data_Management_Plan.pdf}{SIOS Data Management Plan} (section 3) on how to make data FAIR. Exceptions, additions and specifications are listed below in similarly named subsections to in the SIOS data management plan.
+UNIS is committed to publishing data that are Findable, Accessible, Interoperable and Reusable (\href{https://www.go-fair.org/fair-principles/}{FAIR}). UNIS follows the recommendations of the \href{https://sios-svalbard.org/sites/sios-svalbard.org/files/common/Documents/SIOS_Data_Management_Plan.pdf}{SIOS Data Management Plan} (section 3) on how to make data FAIR. Exceptions, additions and specifications are listed below in similarly named subsections to in the SIOS data management plan.
 
 \subsection{Making data findable, including provisions for metadata}
 \label{ss:findable}
 
-All UNIS data will be made available via the SIOS data access portal (\url{https://sios-svalbard.org/metsis/search}), as discussed in \href{s:resources}{Allocation of resources}. 
+All UNIS data will be made available via the SIOS data access portal (\url{https://sios-svalbard.org/metsis/search}), as discussed in section \ref{s:resources}. 
 
-\subsection{Making data openly accessible [fair data]}
+\subsection{Making data openly accessible}
 \label{ss:accessible}
 
-The basic principle is free and open access data as soon as possible. 
+The basic principle is that data should be as freely and openly accessible as possible, as soon as possible, but as closed as neccessary. This is discussed in the \href{https://www.unis.no/wp-content/uploads/2025/11/sciencedataguidelines.pdf}{UNIS Science Data Guidelines}. 
 
 In some cases, embargo periods can exist to delay the publishing of data. This may vary from dataset to dataset, depending on the time required from dataset to dataset. Embargo periods should be requested on a case by case basis to the UNIS leadership group with some exceptions:
 
@@ -111,36 +112,35 @@ In some cases, embargo periods can exist to delay the publishing of data. This m
  \item Masters students are entitled to a maximum embargo period of 2 years before they are published, but must be published before the student finishes their Masters project. 
  \item PhD students are entitled to a maximum embargo period of 4 years before they are published, but must be published before the student finishes their PhD project.
  \item Whether data from undergraduate student courses should be published and when should be determined on a case by case basis. 
+\item Any regulations on export control must be respected.
+\item Some datasets may require permission to publish openly (e.g. high resolution seabed mapping). 
+\item Other embargo periods for data should be approved by the UNIS leadership group.
  \end{itemize}
-
-In all of the cases above, everyone is encouraged to publish their data as soon as technically possible regardless.
 
 \section{Allocation of resources}
 \label{s:resources}
 
-Currently, there is no overview of the total costs for making UNIS data FAIR. 
+All published data relevant to Svalbard should be made available via the SIOS data access portal (\url{https://sios-svalbard.org/metsis/search}). Priority should therefore be given to publish to data centres that contribute to the SIOS data access portal. These are listed in the section `Allocation of resources' of the \href{https://sios-svalbard.org/sites/sios-svalbard.org/files/common/Documents/SIOS_Data_Management_Plan.pdf}{SIOS Data Management Plan}.
 
-All data relevant to Svalbard should be made available via the SIOS data access portal (\url{https://sios-svalbard.org/metsis/search}). Priority should therefore be given to publish to data centres that contribute to the SIOS data access portal. These are listed in the section `Allocation of resources' of the \href{https://sios-svalbard.org/sites/sios-svalbard.org/files/common/SIOS_Data_Management_Plan.pdf}{SIOS Data Management Plan}.
-
-Of these data centres, Norwegian data centres should be prioritised. NIRD (the National Infrastructure for Research Data) host a data centre funded by the Research Council of Norway (NIRD Research Data Archive - \url{https://archive.norstore.no/}). This is not attached to any individual research institution and therefore may be particularly suitable for many UNIS datasets. However, other data centres that contribute to SIOS can be used if collaborating with employees of other research institutions or if a data centre offers preferable functionality(s).
+Of these data centres, Norwegian data centres should be prioritised. NIRD (the National Infrastructure for Research Data) host a data centre funded by the Research Council of Norway (NIRD Research Data Archive - \url{https://archive.sigma2.no/}). This is not attached to any individual research institution and therefore may be particularly suitable for many UNIS datasets. However, other data centres that contribute to SIOS can be used if collaborating with employees of other research institutions or if a data centre offers preferable functionality(s).
 
 UNIS endorses the work done by the Norwegian Scientific Data Network (NorDataNet - \url{https://www.nordatanet.no/en}) to make it easier for people to publish FAIR data. It is possible to publish CF-NetCDF files to NIRD Research Data Archive through NorDataNet. Using this method, the global attributes used in the CF-NetCDF file are used to populate the discovery metadata on the landing page of the dataset. One therefore does not have to enter this information manually. NorDataNet also provides access to tools for validating CF-NetCDF files, converting ASCII files to CF-NetCDF, spreadsheet templates for CF-NetCDF and Darwin Core Archives and guidelines on what metadata should be included. 
 
-Data published to a data centre that does not contribute to the SIOS data access portal must be linked manually using a metadata collection form hosted by SIOS (\url{https://sios-svalbard.org/metadata-collection-form}).  
+Data published to a data centre that does not contribute to the SIOS data access portal must be linked manually using a metadata collection form hosted by SIOS (\url{https://sios-svalbard.org/metadata-collection-form} ). One must be logged in with their SIOS account to access this form.  
 
 \section{Data security}
 \label{s:security}
 
-As mentioned in section \ref{s:resources}, UNIS data should be published in data centres that contribute to the SIOS data access portal. Therefore, as mentioned in the `Data security' section of the \href{https://sios-svalbard.org/sites/sios-svalbard.org/files/common/SIOS_Data_Management_Plan.pdf}{SIOS Data Management Plan}, the security of published UNIS datasets relies on the security implemented by these data centres.
+As mentioned in section \ref{s:resources}, UNIS data should be published in data centres that contribute to the SIOS data access portal in most cases. Therefore, as mentioned in the `Data security' section of the \href{https://sios-svalbard.org/sites/sios-svalbard.org/files/common/Documents/SIOS_Data_Management_Plan.pdf}{SIOS Data Management Plan}, the security of published UNIS datasets relies on the security implemented by these data centres.
 
 \section{Ethical aspects}
 \label{s:ethics}
 
-Ethical aspects are handled according to the UNIS Data Policy. Generally, UNIS is not handling sensitive research data, but UNIS follows the principle of ``as open as possible, as closed as necessary''. All data will be classified in two main categories; i) non-sensitive, and ii) sensitive (personal data and/or data that can be used for an unintended purpose).
+Ethical aspects are handled according to the UNIS Data Policy. Generally, UNIS is not handling sensitive research data, but UNIS follows the principle of ``as open as possible, as closed as necessary''. All data will be classified in two main categories; i) non-sensitive, and ii) sensitive (personal data and/or data that can be used for an unintended purpose). This is detailed in the \href{https://www.unis.no/wp-content/uploads/2025/11/sciencedataguidelines.pdf}{UNIS Science Data Guidelines}.
 
 \section{Other}
 \label{s:other}
 
-The UNIS data management plan is, as mentioned above, based on the existing \href{https://sios-svalbard.org/sites/sios-svalbard.org/files/common/SIOS_Data_Management_Plan.pdf}{SIOS Data Management Plan}. It has been modified to suit the needs of UNIS. Wherever possible, this document refers to the SIOS data management plan instead of duplicating text. Therefore, the recommendations provided in the UNIS data management plan will evolve as the SIOS data management plan evolves. 
+The UNIS data management plan is, as mentioned above, based on the existing \href{https://sios-svalbard.org/sites/sios-svalbard.org/files/common/Documents/SIOS_Data_Management_Plan.pdf}{SIOS Data Management Plan}. It has been modified to suit the needs of UNIS. Wherever possible, this document refers to the SIOS data management plan instead of duplicating text. Therefore, the recommendations provided in the UNIS data management plan will evolve as the SIOS data management plan evolves. 
 
 \end{document} 
