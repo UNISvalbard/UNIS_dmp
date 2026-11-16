@@ -12,8 +12,12 @@
 \usepackage{fancyhdr}
 \usepackage{lastpage}
 \usepackage{booktabs} % For better table formatting
+\usepackage{changes}
+\usepackage{xcolor}
 \pagestyle{fancy}
 \hypersetup{colorlinks=true,linkcolor=blue, linktocpage}
+\setaddedmarkup{\textcolor{purple}{#1}}
+\setdeletedmarkup{\textcolor{red}{\sout{#1}}}
 
 \newcommand{\emailme}{\href{mailto:lukem@unis.no}{lukem@unis.no}}
 
@@ -30,7 +34,7 @@
 % title
 \title{UNIS data management plan}
 %\date{\today\\v1.0}
-\date{January 26, 2026 \\v1.1}
+\date{November 16, 2026 \\v1.2}
 %\author{Luke Marsden (\emailme)}
 \pretitle{%
   \begin{center}
@@ -49,6 +53,7 @@
 \toprule
 Version & Date       & Comment                                      & Responsible \\
 \midrule
+1.2       & 2026-11-16 & Removal of reference to NorDataNet specific tools and instead referring to UNIS page on how to publish UNIS data & Luke Marsden      \\
 1.1.1     & 2026-02-13 & Minor corrections about UNIS funded projects & Stein Haaland     \\
 1.1       & 2026-01-26 & Updates approved by LG & Luke Marsden, Stein Haaland     \\
 1       & 2023-08-18 & Approved by the LG & Luke Marsden     \\
@@ -125,9 +130,11 @@ All published data relevant to Svalbard should be made available via the SIOS da
 
 Of these data centres, Norwegian data centres should be prioritised. NIRD (the National Infrastructure for Research Data) host a data centre funded by the Research Council of Norway (NIRD Research Data Archive - \url{https://archive.sigma2.no/}). This is not attached to any individual research institution and therefore may be particularly suitable for many UNIS datasets. However, other data centres that contribute to SIOS can be used if collaborating with employees of other research institutions or if a data centre offers preferable functionality(s).
 
-UNIS endorses the work done by the Norwegian Scientific Data Network (NorDataNet - \url{https://www.nordatanet.no/en}) to make it easier for people to publish FAIR data. It is possible to publish CF-NetCDF files to NIRD Research Data Archive through NorDataNet. Using this method, the global attributes used in the CF-NetCDF file are used to populate the discovery metadata on the landing page of the dataset. One therefore does not have to enter this information manually. NorDataNet also provides access to tools for validating CF-NetCDF files, converting ASCII files to CF-NetCDF, spreadsheet templates for CF-NetCDF and Darwin Core Archives and guidelines on what metadata should be included. 
+\deleted{UNIS endorses the work done by the Norwegian Scientific Data Network (NorDataNet - \url{https://www.nordatanet.no/en}) to make it easier for people to publish FAIR data. It is possible to publish CF-NetCDF files to NIRD Research Data Archive through NorDataNet. Using this method, the global attributes used in the CF-NetCDF file are used to populate the discovery metadata on the landing page of the dataset. One therefore does not have to enter this information manually. NorDataNet also provides access to tools for validating CF-NetCDF files, converting ASCII files to CF-NetCDF, spreadsheet templates for CF-NetCDF and Darwin Core Archives and guidelines on what metadata should be included.}
 
-Data published to a data centre that does not contribute to the SIOS data access portal must be linked manually using a metadata collection form hosted by SIOS (\url{https://sios-svalbard.org/metadata-collection-form} ). One must be logged in with their SIOS account to access this form.  
+Data published to a data centre that does not contribute to the SIOS data access portal must be linked manually using a metadata collection form hosted by SIOS (\url{https://sios-svalbard.org/metadata-collection-form} ). One must be logged in with their SIOS account to access this form.
+
+\added{Technical details of how to publish UNIS data are outlined on an open webpage at (\url{https://www.unis.no/how-to-publish-unis-data/}).}  
 
 \section{Data security}
 \label{s:security}
